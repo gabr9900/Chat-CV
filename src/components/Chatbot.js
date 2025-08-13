@@ -1,8 +1,7 @@
 
 const Chatbot = {
     defaultResponses: {
-        "Hello": "Hello! How can I help you today?",
-        "Vieni a giocare": "succhiami il cazzo coglione",
+        "Ciao Hi Hola Hello": "Hello! How can I help you today?",
         "How are you?": "I'm just a bot, but thanks for asking! How about you?",
         "What time is it?": "I can’t check the clock directly, but your device should have the current time.",
         "Yes": "Okay.",
