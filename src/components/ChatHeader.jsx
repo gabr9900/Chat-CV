@@ -1,4 +1,4 @@
-import ProfileImage from '../assets/gv.png';
+import ProfileImage from '../assets/chatbot.png';
 import './ChatHeader.css'
 export function ChatHeader() {
     return (

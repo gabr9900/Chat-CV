@@ -69,6 +69,7 @@
     border-bottom-right-radius: 25px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    white-space: pre-wrap;
 }
 
 .message.bot::before {

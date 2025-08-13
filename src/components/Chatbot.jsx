@@ -1,4 +1,3 @@
-
 const Chatbot = {
     defaultResponses: {
         "Ciao": "Hello! How can I help you?",
@@ -15,13 +14,19 @@ const Chatbot = {
         "Tell me a joke": "Why don't scientists trust atoms? Because they make up everything!",
         "Thank you": "You're welcome! If you need anything else, just ask.",
         "Goodbye": "Goodbye! Have a great day!",
-        "Who are you?": "I'm Gabriele Varchetta, a Junior IT Specialist with a focus on full-stack development. I graduated with top marks in Computer Science and Telecommunications and have experience with international projects, internships, and technical training.",
-        "What skills do you have?": "Technical skills: HTML, CSS, JavaScript, React, Java, C++, Python, MySQL, Flutter, Astro, Strapi, Git. Soft skills: leadership, teamwork, problem solving, adaptability, communication.",
-        "Work experience": "Junior Developer Intern at Fenles Startup, Barcelona (Nov-Dec 2024): built interfaces with HTML, CSS, Astro, Flutter, managed content via Strapi CMS, coordinated a team of students.",
-        "Projects": "Erasmus+ Cyprus: language and intercultural training. PCTO Accenture: Full Stack training (Java, MySQL, HTML, CSS). Form&Job course: robotics assistant using Python.",
-        "Certifications": "Cybersecurity Essentials – Cisco Networking Academy, 2025.",
-        "Languages": "Italian: native | English: advanced (B2) | Spanish: intermediate (A2-B1).",
-        "How can I contact you?": "You can email me at gabriele.varchetta05@gmail.com, call +39 334 312 4928, or find me on LinkedIn: linkedin.com/in/gabriele-varchetta-t777t",
+        "Who are you?": "I'm Gabriele Varchetta, a Junior IT Developer \nwith a focus on full-stack development. \nI graduated with top marks in Computer Science and Telecommunications \nand have experience with international projects, internships, and technical training",
+        "What skills do you have?": "Technical skills: \n- HTML \n- CSS \n- JavaScript \n- React \n- Java \n- C++ \n- Python \n- MySQL \n- Flutter \n- Strapi. \n\nSoft skills: \n- leadership \n- teamwork \n- problem solving \n- adaptability \n- communication",
+        "Work experience": "Junior Developer Intern at Fenles Startup \nBarcelona (Nov-Dec 2024): \n\n- built interfaces with HTML, CSS, Astro, Flutter \n- managed content via Strapi CMS \n- coordinated a team of interns",
+        "Projects": "Erasmus+ Cyprus: language and intercultural training. \n\nPCTO Accenture: Full Stack training (Java, MySQL, HTML, CSS). \n\nForm&Job course: robotics assistant using Python",
+        "Certifications": "- Cybersecurity Essentials \nCisco Networking Academy, 2022 \n\n - IOT Introduction \nCisco Networking Academy, 2022 \n\n - IOE Introduction \nCisco Networking Academy, 2022 ",
+        "Languages": "- Italian: native \n- English: advanced (B2)  \n- Spanish: intermediate (A2-B1).",
+        "How can I contact you?": () => (
+            <div>
+                <p>Email: <br /><a href="mailto:gabriele.varchetta05@gmail.com">gabriele.varchetta05@gmail.com</a></p>
+                <p>Phone number: <br /><a href="tel:+393343124928">+39 334 312 4928</a></p>
+                <p>Find me on LinkedIn: <br /><a href="https://linkedin.com/in/gabriele-varchetta-t777t" target="_blank" rel="noopener noreferrer">linkedin.com/in/gabriele-varchetta-t777t</a></p>
+            </div>
+        ),
     },
 
     additionalResponses: {},
@@ -47,12 +52,9 @@ const Chatbot = {
             ...this.additionalResponses,
         };
 
-        const {
-            ratings,
-            bestMatchIndex,
-        } = this.stringSimilarity(message, Object.keys(responses));
-
+        const { ratings, bestMatchIndex } = this.stringSimilarity(message, Object.keys(responses));
         const bestResponseRating = ratings[bestMatchIndex].rating;
+
         if (bestResponseRating <= 0.3) {
             return this.unsuccessfulResponse;
         }
@@ -108,25 +110,22 @@ const Chatbot = {
         return (2.0 * intersectionSize) / (first.length + second.length - 2);
     },
 
-
     stringSimilarity: function (mainString, targetStrings) {
         const ratings = [];
         let bestMatchIndex = 0;
 
         for (let i = 0; i < targetStrings.length; i++) {
             const currentTargetString = targetStrings[i];
-            const currentRating = this.compareTwoStrings(mainString, currentTargetString)
-            ratings.push({ target: currentTargetString, rating: currentRating })
+            const currentRating = this.compareTwoStrings(mainString, currentTargetString);
+            ratings.push({ target: currentTargetString, rating: currentRating });
             if (currentRating > ratings[bestMatchIndex].rating) {
-                bestMatchIndex = i
+                bestMatchIndex = i;
             }
         }
 
-        const bestMatch = ratings[bestMatchIndex]
-
+        const bestMatch = ratings[bestMatchIndex];
         return { ratings: ratings, bestMatch: bestMatch, bestMatchIndex: bestMatchIndex };
     },
 };
 
 export default Chatbot;
-
