@@ -2,38 +2,15 @@ import './Homepage.css';
 import { motion } from 'framer-motion';
 import { Startbutton } from './StartButton';
 import { Welcome } from './Welcome';
-import { useEffect, useState } from 'react';
 
 function Homepage() {
-    const [coords, setCoords] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCoords({
-                x: Math.random() * 40 - 20, // da -20px a +20px
-                y: Math.random() * 40 - 20
-            });
-        }, 2000); // ogni 2 secondi cambia posizione
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
         <div className="homepage">
             {/* Sfondo animato */}
             <div className="gradient-bg"></div>
             <div className="overlay"></div>
 
-            {/* Immagine con movimento casuale */}
-            <motion.img
-                src="chatbot.png"
-                alt="Logo"
-                className="homepage-image"
-                animate={{ x: coords.x, y: coords.y }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-            />
-
-            {/* Welcome */}
+            {/* Contenuto animato */}
             <motion.div
                 className="welcome-container"
                 initial={{ opacity: 0, y: 50 }}
@@ -43,7 +20,7 @@ function Homepage() {
                 <Welcome />
             </motion.div>
 
-            {/* Bottone */}
+            {/* Bottone animato */}
             <motion.div
                 className="start-btn-container"
                 initial={{ opacity: 0, scale: 0.8 }}

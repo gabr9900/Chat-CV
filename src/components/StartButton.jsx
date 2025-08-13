@@ -10,7 +10,7 @@ export function Startbutton() {
 
     return (
         <button className="start-button" onClick={avvia}>
-            Start
+            Start Chatting
         </button>
     );
 }

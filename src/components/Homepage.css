@@ -1,0 +1,75 @@
+.homepage {
+    position: relative;
+    width: 90vw;
+    max-width: 900px;
+    height: 90vh;
+    background: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Welcome in alto centrato */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.homepage-image {
+    position: absolute;
+    top: 80px;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 150px;
+    /* larghezza immagine */
+    height: auto;
+    z-index: 2;
+}
+
+/* Bottone centrato */
+.start-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    /* occuperà tutto lo spazio della homepage */
+    z-index: 2;
+}
+
+/* Sfondo gradiente animato */
+.gradient-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #7b2ff7, #f107a3, #00d2ff, #00ffb9);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
