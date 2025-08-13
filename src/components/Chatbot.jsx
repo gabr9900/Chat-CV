@@ -20,7 +20,7 @@ const Chatbot = {
         "Projects": "Erasmus+ Cyprus: language and intercultural training. \n\nPCTO Accenture: Full Stack training (Java, MySQL, HTML, CSS). \n\nForm&Job course: robotics assistant using Python",
         "Certifications": "- Cybersecurity Essentials \nCisco Networking Academy, 2022 \n\n - IOT Introduction \nCisco Networking Academy, 2022 \n\n - IOE Introduction \nCisco Networking Academy, 2022 ",
         "Languages": "- Italian: native \n- English: advanced (B2)  \n- Spanish: intermediate (A2-B1).",
-        "How can I contact you?": () => (
+        "How can I contact you? ": () => (
             <div>
                 <p>Email: <br /><a href="mailto:gabriele.varchetta05@gmail.com">gabriele.varchetta05@gmail.com</a></p>
                 <p>Phone number: <br /><a href="tel:+393343124928">+39 334 312 4928</a></p>
