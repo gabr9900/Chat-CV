@@ -1,7 +1,7 @@
 .start-button {
     display: block;
     margin: 0 auto;
-    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 99%);
     color: white;
     font-weight: 600;
     font-size: 2rem;
