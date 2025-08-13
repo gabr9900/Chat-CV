@@ -1,4 +1,4 @@
-import Chatbot from './chatbot.js';
+import Chatbot from './Chatbot.js';
 import './OptionsPanel.css'
 
 export function OptionsPanel({ setChatMessages }) {
