@@ -1,0 +1,3 @@
+[submodule "cv-chatbot"]
+	path = cv-chatbot
+	url = https://github.com/gabr9900/cv-chatbot.git
