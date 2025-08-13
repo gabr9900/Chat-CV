@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Chatbot from './chatbot.js';
+import Chatbot from './Chatbot.js';
 import "./ChatInput.css";
 
 export function ChatInput({ chatMessages, setChatMessages }) {
