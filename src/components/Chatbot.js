@@ -1,7 +1,10 @@
 
 const Chatbot = {
     defaultResponses: {
-        "Ciao Hi Hola Hello": "Hello! How can I help you today?",
+        "Ciao": "Hello! How can I help you?",
+        "Hi": "Hello! How can I help you?",
+        "Hola": "Hello! How can I help you?",
+        "Hello": "Hello! How can I help you?",
         "How are you?": "I'm just a bot, but thanks for asking! How about you?",
         "What time is it?": "I can’t check the clock directly, but your device should have the current time.",
         "Yes": "Okay.",
@@ -23,7 +26,7 @@ const Chatbot = {
 
     additionalResponses: {},
 
-    unsuccessfulResponse: `Sorry, I didn't quite understand that. Currently, You can check some example questions on the right!`,
+    unsuccessfulResponse: `Sorry, I didn't quite understand that. Currently, You can check some example questions!`,
 
     emptyMessageResponse: `Sorry, it looks like your message is empty. Please make sure you send a message and I will give you a response.`,
 
