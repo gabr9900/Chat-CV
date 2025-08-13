@@ -42,7 +42,6 @@ const Chatbot = {
             return this.emptyMessageResponse;
         }
 
-        // This spread operator (...) combines the 2 objects.
         const responses = {
             ...this.defaultResponses,
             ...this.additionalResponses,
@@ -70,7 +69,6 @@ const Chatbot = {
 
     getResponseAsync: function (message) {
         return new Promise((resolve) => {
-            // Pretend it takes some time for the chatbot to response.
             setTimeout(() => {
                 resolve(this.getResponse(message));
             }, 1000);
@@ -78,8 +76,8 @@ const Chatbot = {
     },
 
     compareTwoStrings: function (first, second) {
-        first = first.replace(/\s+/g, '')
-        second = second.replace(/\s+/g, '')
+        first = first.toLowerCase().replace(/\s+/g, '');
+        second = second.toLowerCase().replace(/\s+/g, '');
 
         if (first === second) return 1;
         if (first.length < 2 || second.length < 2) return 0;
@@ -92,7 +90,7 @@ const Chatbot = {
                 : 1;
 
             firstBigrams.set(bigram, count);
-        };
+        }
 
         let intersectionSize = 0;
         for (let i = 0; i < second.length - 1; i++) {
@@ -109,6 +107,7 @@ const Chatbot = {
 
         return (2.0 * intersectionSize) / (first.length + second.length - 2);
     },
+
 
     stringSimilarity: function (mainString, targetStrings) {
         const ratings = [];
