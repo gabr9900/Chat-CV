@@ -1,4 +1,4 @@
-import '../Index.css'
+import '../index.css'
 
 import { Startbutton } from './StartButton';
 import { Welcome } from './Welcome';
