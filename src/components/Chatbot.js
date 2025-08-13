@@ -2,7 +2,12 @@
 const Chatbot = {
     defaultResponses: {
         "Hello": "Hello! How can I help you today?",
+        "Vieni a giocare": "succhiami il cazzo coglione",
         "How are you?": "I'm just a bot, but thanks for asking! How about you?",
+        "What time is it?": "I can’t check the clock directly, but your device should have the current time.",
+        "Yes": "Okay.",
+        "No": "Alright.",
+        "Where are you?": "I’m here.",
         "What is your name?": "I'm Gabriele Varchetta's interactive CV.",
         "What can you do?": "I can answer your questions about me!",
         "Tell me a joke": "Why don't scientists trust atoms? Because they make up everything!",
